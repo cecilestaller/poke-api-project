@@ -1,7 +1,9 @@
+import CardList from "../../components/card_list/CardList";
+
 const Home = () => {
     return (  
         <main>
-            <h2>home</h2>
+            <CardList />
         </main>
     );
 }

@@ -3,3 +3,9 @@
   margin: 0;
   padding: 0;
 }
+
+.master-wrap {
+  max-width: 400px;
+  background-color: lightblue;
+  margin: 0 auto;
+}
