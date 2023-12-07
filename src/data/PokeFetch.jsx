@@ -1,12 +1,14 @@
-import { useEffect, useContext } from "react";
+import { useEffect, useContext, useState } from "react";
 import { FetchContext } from "../context/Context";
 
 const PokeFetch = () => {
     
     const { pokeData, setPokeData } = useContext(FetchContext);
+    // const [pokeData, setPokeData] = useState([])
+
 
     useEffect(() => {
-        fetch('https://pokeapi.co/api/v2/pokemon')
+        fetch('https://pokeapi.co/api/v2/pokemon/')
             .then(res => res.json())
             .then(data => {
                 let newArr = [];
