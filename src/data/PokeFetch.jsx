@@ -1,7 +1,19 @@
-import { useEffect, useContext } from "react";
+import { useEffect, useContext, useState } from "react";
 import { FetchContext } from "../context/Context";
 
 const PokeFetch = () => {
+<<<<<<< HEAD
+    
+    const { pokeData, setPokeData } = useContext(FetchContext);
+    // const [pokeData, setPokeData] = useState([])
+
+
+    useEffect(() => {
+        fetch('https://pokeapi.co/api/v2/pokemon/')
+            .then(res => res.json())
+            .then(data => {
+                let newArr = [];
+=======
   const { pokeData, setPokeData } = useContext(FetchContext);
 
   useEffect(() => {
@@ -9,6 +21,7 @@ const PokeFetch = () => {
       .then((res) => res.json())
       .then((data) => {
         let newArr = [];
+>>>>>>> dev
 
         data.results?.map((singlePokeObj) => {
           fetch(`${singlePokeObj.url}`)
