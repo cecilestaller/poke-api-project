@@ -1,7 +1,10 @@
+import CardItem from "../card_item/CardItem";
+import './CardList.scss'
+
 const CardList = () => {
     return (  
-        <section>
-            <h2>CardList</h2>
+        <section className="card-list-wrap">
+            <CardItem />
         </section>
     );
 }
