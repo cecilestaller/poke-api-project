@@ -2,20 +2,17 @@ import { createContext, useState } from "react";
 
 const FetchContext = createContext([]);
 
+const FetchContextProvider = ({ children }) => {
+  const [pokeData, setPokeData] = useState([]);
+  const [pokeTypes, setPokeTypes] = useState([]);
 
-const FetchContextProvider = ({children}) => {
+  return (
+    <FetchContext.Provider
+      value={{ pokeData, setPokeData, pokeTypes, setPokeTypes }}
+    >
+      {children}
+    </FetchContext.Provider>
+  );
+};
 
-    const [pokeData, setPokeData] = useState([]);
-
-    return (  
-        <FetchContext.Provider value={{pokeData, setPokeData}}>
-
-            {children}
-
-        </FetchContext.Provider>
-    );
-}
-
-export {FetchContextProvider, FetchContext};
-
-
+export { FetchContextProvider, FetchContext };
