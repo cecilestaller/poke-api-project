@@ -14,12 +14,13 @@ const CardItem = () => {
                 return (
                     
                     <article key={singlePokeObject.id}>
-                        <Link>
-
+                        <Link to={`/detail/${singlePokeObject.id}`}>
                         <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${singlePokeObject.id}.png`} alt={singlePokeObject.name} />
-                        <div>
+                        
+                        
+                        <div className="info-wrap">
                             <p>#{singlePokeObject.id.toString().padStart(3, '0')}</p>
-                            <p>{singlePokeObject.name}</p>
+                            <p>{singlePokeObject.name.charAt(0).toUpperCase().concat(singlePokeObject.name.slice(1))}</p>
                         </div>
 
                         </Link>
