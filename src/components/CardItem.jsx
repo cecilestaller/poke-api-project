@@ -6,7 +6,8 @@ const CardItem = () => {
             <Link>
             <img src="" alt="" />
             <div>
-                <p></p>
+                <p> </p>
+
                 <p></p>
             </div>
             </Link>
