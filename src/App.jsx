@@ -2,9 +2,9 @@ import { useState } from 'react'
 
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
-import Home from './pages/Home'
-import Type from './pages/Type'
-import Detail from './pages/Detail'
+import Home from './pages/home/Home'
+import Type from './pages/type/Type'
+import Detail from './pages/detail/Detail'
 import { FetchContextProvider } from './context/Context'
 import PokeFetch from './data/PokeFetch'
 
