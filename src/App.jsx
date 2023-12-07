@@ -2,9 +2,9 @@ import { useState } from 'react'
 
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
-import Home from './pages/Home'
-import Type from './pages/Type'
-import Detail from './pages/Detail'
+import Home from './pages/home/Home'
+import Type from './pages/type/Type'
+import Detail from './pages/detail/Detail'
 import { FetchContextProvider } from './context/Context'
 import PokeFetch from './data/PokeFetch'
 
@@ -12,7 +12,8 @@ function App() {
 
   return (
     <>
-    <FetchContextProvider>
+    <div className='master-wrap'>
+      <FetchContextProvider>
       <PokeFetch />
       <Routes>
         <Route path='/' element={<Home />}/>
@@ -20,6 +21,8 @@ function App() {
         <Route path='/detail/:id' element={<Detail />}/>
       </Routes>
     </FetchContextProvider>
+    </div>
+    
     </>
   )
 }

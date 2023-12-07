@@ -22,7 +22,7 @@ const PokeFetch = () => {
             })
             .catch(error => console.log(error))
     }, [])
-    console.log('final poke log: ', pokeData);
+    // console.log('final poke log: ', pokeData);
 }
 
 export default PokeFetch;
