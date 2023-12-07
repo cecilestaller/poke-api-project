@@ -10,20 +10,19 @@ const PokeFetch = () => {
       .then((res) => res.json())
       .then((data) => {
         let newArr = [];
-
-        data.results?.map((singlePokeObj) => {
-          fetch(`${singlePokeObj.url}`)
-            .then((res) => res.json())
-            .then((singleData) => {
-              newArr.push({ ...singleData });
-              setPokeData(newArr);
-            });
-        });
-      })
-      .catch((error) => console.log(error));
-  }, []);
-  console.log("final poke log: ", pokeData);
-
+                data.results?.map((singlePokeObj) => {
+                    fetch(`${singlePokeObj.url}`)
+                        .then(res => res.json())
+                        .then(singleData => {
+                            newArr.push({...singleData})
+                            setPokeData(newArr)
+                        })
+                })
+            })
+            .catch(error => console.log(error))
+    }, [])
+    // console.log('final poke log: ', pokeData);
+}
   useEffect(() => {
     fetch("https://pokeapi.co/api/v2/type")
       .then((response) => response.json())

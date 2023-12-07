@@ -12,7 +12,8 @@ function App() {
 
   return (
     <>
-    <FetchContextProvider>
+    <div className='master-wrap'>
+      <FetchContextProvider>
       <PokeFetch />
       <Routes>
         <Route path='/' element={<Home />}/>
@@ -20,6 +21,8 @@ function App() {
         <Route path='/detail/:id' element={<Detail />}/>
       </Routes>
     </FetchContextProvider>
+    </div>
+    
     </>
   )
 }
