@@ -6,7 +6,6 @@ import './CardItem.scss'
 const CardItem = () => {
 
     const { pokeData, setPokeData } = useContext(FetchContext);
-    console.log('home log: ', pokeData);
 
     return (  
         <article className="card-items-wrap">
