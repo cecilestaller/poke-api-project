@@ -20,6 +20,7 @@ const CardItem = () => {
     }
   }, [typeValue, pokeData]);
 
+
   return (
     <article className="card-items-wrap">
       {displayData?.map((singlePokeObject) => {

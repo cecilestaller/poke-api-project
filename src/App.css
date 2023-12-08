@@ -4,59 +4,26 @@
   padding: 0;
 }
 
-.master-wrap {
-  background-color: lightblue;
+@font-face {
+  font-family: 'robMono';
+  src: url(./assets/fonts/RobotoMono-VariableFont_wght.ttf);
 }
 
-.container {
-  max-width: 1440px;
+body {
+  font-family: 'robMono';
+}
+
+.master-wrap {
+  background: rgb(35,87,240);
+  background: linear-gradient(90deg, rgba(35,87,240,1) 0%, rgba(70,197,245,1) 70%);
+  padding: 3%;
   margin: 0 auto;
 }
 
-.grid {
-  display: grid;
-  /* column-gap: 6.4rem; */
-  /* row-gap: 3.6rem; */
-  justify-content: center;
-  align-items: center;
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
 }
 
-.grid:not(:last-child) {
-  margin-bottom: 9.6rem;
-}
 
-.grid--2-cols {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.grid--3-cols {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.grid--4-cols {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.grid--5-cols {
-  grid-template-columns: repeat(5, 1fr);
-}
-
-.grid--6-cols {
-  grid-template-columns: repeat(6, 1fr);
-}
-
-.grid--8-cols {
-  grid-template-columns: repeat(8, 1fr);
-}
-
-.grid--10-cols {
-  grid-template-columns: repeat(10, 1fr);
-}
-
-.grid--12-cols {
-  grid-template-columns: repeat(12, 1fr);
-}
-
-.grid--center-v {
-  align-items: center;
-}

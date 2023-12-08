@@ -8,6 +8,7 @@ const Type = () => {
     <main className="main-type container">
       <article className="heading-wrapper">
         <NavLink className="logo">
+
           <PokeLogo />
         </NavLink>
         <NavLink className="close-btn">

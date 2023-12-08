@@ -2,8 +2,7 @@ import { useEffect, useContext, useState } from "react";
 import { FetchContext } from "../context/Context";
 
 const PokeFetch = () => {
-  const { setPokeData } = useContext(FetchContext);
-  const { setPokeTypes } = useContext(FetchContext);
+  const { setPokeData, setPokeTypes } = useContext(FetchContext);
 
   useEffect(() => {
     fetch("https://pokeapi.co/api/v2/pokemon/?limit=150")
