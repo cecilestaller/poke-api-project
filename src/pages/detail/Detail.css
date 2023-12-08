@@ -452,9 +452,7 @@
     font-size: 1.25em;
     border: solid 2px black;
     padding: 2%;
-    margin-top: 50px;
     color: white;
-    /* background: linear-gradient(45deg, rgba(209,0,0,1) 53%, rgba(255,255,255,1) 47%); */
     background: linear-gradient(45deg, rgba(35,87,240,1) 53%, rgba(70,197,245,1) 47%);;
     border-radius: 20px;
 }
@@ -462,6 +460,12 @@
 .detailSec a:hover{
     background: rgba(35,87,240,1);
     color: white;
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .detCon{
@@ -509,5 +513,3 @@
         margin-inline: 30%;
     }
 }
-
-    
