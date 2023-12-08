@@ -18,7 +18,8 @@ const FetchContextProvider = ({ children }) => {
         typeValue,
         setTypeValue,
         searchItem,
-        setSearchItem,
+        setSearchItem
+
       }}
     >
       {children}

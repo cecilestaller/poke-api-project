@@ -6,8 +6,6 @@ import "./CardItem.scss";
 const CardItem = () => {
   const { searchItem, typeValue, pokeData } = useContext(FetchContext);
   const [displayData, setDisplayData] = useState([]);
-  console.log(searchItem);
-  console.log(typeValue);
   useEffect(() => {
     //  If a typeValue exists and is valid, the data is filtered
     if (typeValue && !searchItem) {
@@ -33,6 +31,7 @@ const CardItem = () => {
       setDisplayData(pokeData);
     }
   }, [typeValue, pokeData, searchItem]);
+
 
   return (
     <article className="card-items-wrap">
