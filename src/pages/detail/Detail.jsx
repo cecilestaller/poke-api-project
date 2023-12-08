@@ -1,7 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { FetchContext } from "../../context/Context";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import './Detail.css'
+import BackMenuIcon from "../../components/svg/BackMenuIcon";
 
 
 
@@ -29,7 +30,12 @@ const Detail = () => {
                     return(
                         <section className="detailSec" key={pokemon.id}>
                     <article>
-                        <h1>000{pokemon.id} {pokeName}</h1>
+                        <div className="btn-wrapper">
+                            <Link to='/'>
+                                <BackMenuIcon />
+                            </Link>
+                            <h1>000{pokemon.id} {pokeName}</h1>
+                        </div>
                         <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`} alt="" />
                         <h2>Types</h2>
                         <div className="types">

@@ -6,6 +6,7 @@ const FetchContextProvider = ({ children }) => {
   const [pokeData, setPokeData] = useState([]);
   const [pokeTypes, setPokeTypes] = useState([]);
   const [typeValue, setTypeValue] = useState(null);
+  const [searchItem, setSearchItem] = useState('');
 
   return (
     <FetchContext.Provider
@@ -16,6 +17,8 @@ const FetchContextProvider = ({ children }) => {
         setPokeTypes,
         typeValue,
         setTypeValue,
+        searchItem,
+        setSearchItem
       }}
     >
       {children}

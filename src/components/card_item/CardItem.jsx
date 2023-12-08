@@ -4,21 +4,28 @@ import { FetchContext } from "../../context/Context";
 import "./CardItem.scss";
 
 const CardItem = () => {
-  const { typeValue, pokeData } = useContext(FetchContext);
+  const { searchItem, typeValue, pokeData } = useContext(FetchContext);
   const [displayData, setDisplayData] = useState([]);
+
+  console.log(searchItem);
 
   useEffect(() => {
     //  If a typeValue exists and is valid, the data is filtered
     if (typeValue) {
-      const filteredData = pokeData?.filter((pokemonObj) =>
-        pokemonObj.types.some((typeObj) => typeObj.type.name === typeValue)
+      const filteredData = pokeData?.filter((pokemon) =>
+        pokemon.types.some((typeObj) => typeObj.type.name === typeValue)
       );
       setDisplayData(filteredData);
+    } else if (searchItem) {
+        const searchedData = pokeData.filter((pokemon) =>
+        pokemon.name.toLowerCase().includes(searchItem.toLowerCase())
+        );
+        setDisplayData(searchedData);
     } else {
       // If no typeValue exists, all data is displayed
       setDisplayData(pokeData);
     }
-  }, [typeValue, pokeData]);
+  }, [typeValue, pokeData, searchItem]);
 
 
   return (
