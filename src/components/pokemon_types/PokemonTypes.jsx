@@ -1,11 +1,16 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./PokemonTypes.scss";
 import { FetchContext } from "../../context/Context";
 import { Link } from "react-router-dom";
 
 const PokemonTypes = () => {
-  const { pokeTypes } = useContext(FetchContext);
-  const { typeValue, setTypeValue } = useContext(FetchContext);
+  const { pokeTypes, typeValue, setTypeValue } = useContext(FetchContext);
+
+  const sortedTypes = () => {
+    pokeTypes.results?.sort((typ1, typ2) => typ1.name.localeCompare(typ2.name));
+  };
+
+  sortedTypes();
 
   const colors = {
     bug: "bug",
@@ -35,8 +40,6 @@ const PokemonTypes = () => {
 
   useEffect(() => {}, [typeValue]);
 
-  console.log(typeValue);
-
   return (
     <section className="pokemon-types-section">
       <h2 className="pokemon-types-headline">Type</h2>
@@ -48,7 +51,7 @@ const PokemonTypes = () => {
                 to="/"
                 key={index}
                 className={`types ${
-                  type.name === colors[type.name] ? "green" : "red"
+                  type.name === colors[type.name] ? colors[type.name] : null
                 }`}
                 onClick={handleClick}
               >

@@ -4,22 +4,35 @@ import { FetchContext } from "../../context/Context";
 import "./CardItem.scss";
 
 const CardItem = () => {
-  const { typeValue, pokeData } = useContext(FetchContext);
+  const { searchItem, typeValue, pokeData } = useContext(FetchContext);
   const [displayData, setDisplayData] = useState([]);
-
+  console.log(searchItem);
+  console.log(typeValue);
   useEffect(() => {
     //  If a typeValue exists and is valid, the data is filtered
-    if (typeValue) {
+    if (typeValue && !searchItem) {
       const filteredData = pokeData?.filter((pokemonObj) =>
-        pokemonObj.types.some((typeObj) => typeObj.type.name === typeValue)
+        pokemonObj.types.some(
+          (typeObj) =>
+            typeObj.type.name.toLowerCase() === typeValue.toLowerCase()
+        )
       );
       setDisplayData(filteredData);
+    } else if (searchItem && !typeValue) {
+      const searchedData = pokeData?.filter((pokemon) =>
+        pokemon.name.toLowerCase().includes(searchItem.toLowerCase())
+      );
+      setDisplayData(searchedData);
+    } else if (searchItem && typeValue) {
+      const searchedData = displayData?.filter((pokemon) =>
+        pokemon.name.toLowerCase().includes(searchItem.toLowerCase())
+      );
+      setDisplayData(searchedData);
     } else {
       // If no typeValue exists, all data is displayed
       setDisplayData(pokeData);
     }
-  }, [typeValue, pokeData]);
-
+  }, [typeValue, pokeData, searchItem]);
 
   return (
     <article className="card-items-wrap">
