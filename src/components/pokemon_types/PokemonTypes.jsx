@@ -48,7 +48,7 @@ const PokemonTypes = () => {
                 to="/"
                 key={index}
                 className={`types ${
-                  type.name === colors[type.name] ? "green" : "red"
+                  type.name === colors[type.name] ? colors[type.name] : null
                 }`}
                 onClick={handleClick}
               >
