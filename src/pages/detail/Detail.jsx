@@ -69,7 +69,13 @@ const Detail = () => {
                     return(
                         <section className="detailSec">
                     <article>
-                        <h1>#0{pokemon.id} {pokeName}</h1>
+                    <div className="btn-wrapper">
+                            <Link to='/'>
+                                <BackMenuIcon />
+                            </Link>
+                            <h1>#0{pokemon.id} {pokeName}</h1>
+                        </div>
+                        
                         <div className="detCon">
                         <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`} alt="" />
                         <h2>Types</h2>
@@ -101,7 +107,13 @@ const Detail = () => {
                     return(
                         <section className="detailSec">
                     <article>
-                        <h1>#{pokemon.id} {pokeName}</h1>
+                    <div className="btn-wrapper">
+                            <Link to='/'>
+                                <BackMenuIcon />
+                            </Link>
+                            <h1>#{pokemon.id} {pokeName}</h1>
+                        </div>
+                        
                         <div className="detCon">
                         <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`} alt="" />
                         <h2>Types</h2>
