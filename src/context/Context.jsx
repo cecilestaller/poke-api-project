@@ -5,10 +5,18 @@ const FetchContext = createContext([]);
 const FetchContextProvider = ({ children }) => {
   const [pokeData, setPokeData] = useState([]);
   const [pokeTypes, setPokeTypes] = useState([]);
+  const [typeValue, setTypeValue] = useState(null);
 
   return (
     <FetchContext.Provider
-      value={{ pokeData, setPokeData, pokeTypes, setPokeTypes }}
+      value={{
+        pokeData,
+        setPokeData,
+        pokeTypes,
+        setPokeTypes,
+        typeValue,
+        setTypeValue,
+      }}
     >
       {children}
     </FetchContext.Provider>

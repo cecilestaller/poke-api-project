@@ -5,7 +5,58 @@
 }
 
 .master-wrap {
-  max-width: 400px;
   background-color: lightblue;
+}
+
+.container {
+  max-width: 1440px;
   margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  /* column-gap: 6.4rem; */
+  /* row-gap: 3.6rem; */
+  justify-content: center;
+  align-items: center;
+}
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.grid--6-cols {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.grid--8-cols {
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.grid--10-cols {
+  grid-template-columns: repeat(10, 1fr);
+}
+
+.grid--12-cols {
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.grid--center-v {
+  align-items: center;
 }
