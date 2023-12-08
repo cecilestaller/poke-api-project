@@ -5,8 +5,8 @@ const FetchContext = createContext([]);
 const FetchContextProvider = ({ children }) => {
   const [pokeData, setPokeData] = useState([]);
   const [pokeTypes, setPokeTypes] = useState([]);
-  const [typeValue, setTypeValue] = useState(null);
-  const [searchItem, setSearchItem] = useState('');
+  const [typeValue, setTypeValue] = useState("");
+  const [searchItem, setSearchItem] = useState("");
 
   return (
     <FetchContext.Provider
@@ -19,6 +19,7 @@ const FetchContextProvider = ({ children }) => {
         setTypeValue,
         searchItem,
         setSearchItem
+
       }}
     >
       {children}
