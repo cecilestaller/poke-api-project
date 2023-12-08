@@ -9,7 +9,7 @@ const Type = () => {
   //   console.log(pokeData);
   console.log(pokeTypes.results);
   return (
-    <main>
+    <main className="container">
       <article>
         <NavLink>
           <PokeLogo />

@@ -17,7 +17,7 @@ const Detail = () => {
     
     console.log(filteredPokemon);
     return (  
-        <main>
+        <main className="container">
             {filteredPokemon.map((pokemon)=>{
                 const pokeName = pokemon.name.charAt(0).toUpperCase()+pokemon.name.slice(1)
                 if(pokemon.id<10){
