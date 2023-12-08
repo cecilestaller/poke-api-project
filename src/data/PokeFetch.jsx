@@ -5,7 +5,7 @@ const PokeFetch = () => {
   const { setPokeData, setPokeTypes } = useContext(FetchContext);
 
   useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/pokemon/?limit=150")
+    fetch("https://pokeapi.co/api/v2/pokemon/?limit=151")
       .then((res) => res.json())
       .then((data) => {
         // Erstellen von Promises für alle Detaildaten-Fetches
