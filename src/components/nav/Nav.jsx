@@ -5,33 +5,8 @@ import "./Nav.scss";
 import { useContext, useEffect, useState } from "react";
 import { FetchContext } from "../../context/Context";
 
-
 const Nav = () => {
-    
-    const { searchItem, setSearchItem } = useContext(FetchContext);
-
-    const handleSearch = (e) => {
-        setSearchItem(e.target.value);
-    }
-
-    return (  
-        <nav>
-            <Link to="/type">
-                <BurgerMenuIcon />
-            </Link>
-            <input
-                type="text"
-                placeholder="Search Pokemon"
-                value={searchItem}
-                onChange={handleSearch}
-                />
-            <Link>
-                <DarkModeIcon />
-            </Link>
-        </nav>
-    );
-}
-
+  const { searchItem, setSearchItem } = useContext(FetchContext);
 
   const handleSearch = (e) => {
     setSearchItem(e.target.value);
