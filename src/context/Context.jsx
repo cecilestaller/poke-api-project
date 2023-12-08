@@ -7,6 +7,7 @@ const FetchContextProvider = ({ children }) => {
   const [pokeTypes, setPokeTypes] = useState([]);
   const [typeValue, setTypeValue] = useState("");
   const [searchItem, setSearchItem] = useState("");
+  const [darkMode, setDarkMode] = useState(false);
 
   return (
     <FetchContext.Provider
@@ -18,7 +19,9 @@ const FetchContextProvider = ({ children }) => {
         typeValue,
         setTypeValue,
         searchItem,
-        setSearchItem
+        setSearchItem,
+        darkMode,
+        setDarkMode
 
       }}
     >

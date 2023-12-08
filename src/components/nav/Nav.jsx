@@ -7,11 +7,19 @@ import { FetchContext } from "../../context/Context"
 
 const Nav = () => {
     
-    const { searchItem, setSearchItem } = useContext(FetchContext);
+    const { darkMode, setDarkMode, searchItem, setSearchItem } = useContext(FetchContext);
 
     const handleSearch = (e) => {
         setSearchItem(e.target.value);
     }
+
+    const handleClick = () => setDarkMode(!darkMode);
+
+    console.log(darkMode);
+
+    useEffect(() => {
+
+    }, [darkMode])
 
     return (  
         <nav>
@@ -24,8 +32,8 @@ const Nav = () => {
                 value={searchItem}
                 onChange={handleSearch}
                 />
-            <Link>
-                <DarkModeIcon />
+            <Link onClick={handleClick}>
+                <DarkModeIcon/>
             </Link>
         </nav>
     );
