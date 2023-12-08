@@ -1,31 +1,21 @@
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import PokeLogo from "../../components/svg/PokeLogo";
 import CrossCloseIcon from "../../components/svg/CrossCloseIcon";
-import { useContext } from "react";
-import { FetchContext } from "../../context/Context";
+import PokemonTypes from "../../components/pokemon_types/PokemonTypes";
 
 const Type = () => {
-  const { pokeData, pokeTypes } = useContext(FetchContext);
-  //   console.log(pokeData);
-  console.log(pokeTypes.results);
   return (
-    <main className="container">
-      <article>
-        <NavLink>
+    <main className="main-type container">
+      <article className="heading-wrapper">
+        <NavLink className="logo">
+
           <PokeLogo />
         </NavLink>
-        <NavLink>
+        <NavLink className="close-btn">
           <CrossCloseIcon />
         </NavLink>
       </article>
-      <article>
-        <h2>Type</h2>
-        <section>
-          {pokeTypes?.results.map((type) => (
-            <Link>{type.name}</Link>
-          ))}
-        </section>
-      </article>
+      <PokemonTypes />
     </main>
   );
 };

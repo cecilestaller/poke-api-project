@@ -1,0 +1,33 @@
+.pokemon-types-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.pokemon-types-headline {
+  text-align: center;
+}
+
+.pokemon-types-btns-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.types {
+  font-size: 0.875rem;
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
