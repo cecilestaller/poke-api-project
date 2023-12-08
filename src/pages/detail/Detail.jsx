@@ -19,8 +19,8 @@ const Detail = () => {
     
     
     return (  
-
-       
+        <>
+        
 
         <main className="container">
 
@@ -34,8 +34,10 @@ const Detail = () => {
                             <Link to='/'>
                                 <BackMenuIcon />
                             </Link>
-                            <h1>000{pokemon.id} {pokeName}</h1>
+                            <h1>#00{pokemon.id} {pokeName}</h1>
                         </div>
+                        <div className="detCon">
+
                         <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`} alt="" />
                         <h2>Types</h2>
                         <div className="types">
@@ -44,6 +46,8 @@ const Detail = () => {
                             })}
                             
                         </div>
+                        </div>
+                        
                         <div>
                             <article>
                                 <h2>Height:</h2>
@@ -65,14 +69,16 @@ const Detail = () => {
                     return(
                         <section className="detailSec">
                     <article>
-                        <h1>00{pokemon.id} {pokeName}</h1>
+                        <h1>#0{pokemon.id} {pokeName}</h1>
+                        <div className="detCon">
                         <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`} alt="" />
                         <h2>Types</h2>
                         <div className="types">
-                            {pokemon.types.map((pokeType)=>{
-                                return <button className={pokeType.type.name}>{pokeType.type.name}</button>
+                            {pokemon.types.map((pokeType,index)=>{
+                                return <button className={pokeType.type.name} key={index}>{pokeType.type.name}</button>
                             })}
                             
+                        </div>
                         </div>
                         <div>
                             <article>
@@ -95,14 +101,16 @@ const Detail = () => {
                     return(
                         <section className="detailSec">
                     <article>
-                        <h1>0{pokemon.id} {pokeName}</h1>
+                        <h1>#{pokemon.id} {pokeName}</h1>
+                        <div className="detCon">
                         <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`} alt="" />
                         <h2>Types</h2>
                         <div className="types">
-                            {pokemon.types.map((pokeType)=>{
-                                return <button className={pokeType.type.name}>{pokeType.type.name}</button>
+                            {pokemon.types.map((pokeType,index)=>{
+                                return <button className={pokeType.type.name} key={index}>{pokeType.type.name}</button>
                             })}
                             
+                        </div>
                         </div>
                         <div>
                             <article>
@@ -125,13 +133,15 @@ const Detail = () => {
                     <section className="detailSec">
                 <article>
                     <h1>{pokemon.id} {pokeName}</h1>
+                    <div className="detCon">
                     <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`} alt="" />
                     <h2>Types</h2>
                     <div className="types">
-                        {pokemon.types.map((pokeType)=>{
-                            return <button className={pokeType.type.name}>{pokeType.type.name}</button>
+                        {pokemon.types.map((pokeType,index)=>{
+                            return <button className={pokeType.type.name} key={index}>{pokeType.type.name}</button>
                         })}
                         
+                    </div>
                     </div>
                     <div>
                             <article>
@@ -151,6 +161,7 @@ const Detail = () => {
             })}
             
         </main>
+        </>
     );
 }
 
